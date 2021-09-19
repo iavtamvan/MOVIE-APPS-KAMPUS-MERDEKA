@@ -1,0 +1,62 @@
+package com.iavariav.moviedb.model;
+
+import java.util.List;
+import com.google.gson.annotations.SerializedName;
+
+public class MovieRootModel{
+
+//    @SerializedName("dates")
+//    private List<Dates> dateList;
+
+    @SerializedName("page")
+    private String page;
+
+    @SerializedName("total_pages")
+    private String totalPages;
+
+    @SerializedName("results")
+    private List<ResultsItem> results;
+
+    @SerializedName("total_results")
+    private String totalResults;
+
+//    public List<Dates> getDateList() {
+//        return dateList;
+//    }
+//
+//    public void setDateList(List<Dates> dateList) {
+//        this.dateList = dateList;
+//    }
+
+    public void setPage(String page){
+        this.page = page;
+    }
+
+    public String getPage(){
+        return page;
+    }
+
+    public void setTotalPages(String totalPages){
+        this.totalPages = totalPages;
+    }
+
+    public String getTotalPages(){
+        return totalPages;
+    }
+
+    public void setResults(List<ResultsItem> results){
+        this.results = results;
+    }
+
+    public List<ResultsItem> getResults(){
+        return results;
+    }
+
+    public void setTotalResults(String totalResults){
+        this.totalResults = totalResults;
+    }
+
+    public String getTotalResults(){
+        return totalResults;
+    }
+}
