@@ -52,8 +52,7 @@ public class DashboardFragment extends Fragment {
         apiService.ambilData().enqueue(new Callback<MovieRootModel>() {
             @Override
             public void onResponse(Call<MovieRootModel> call, Response<MovieRootModel> response) {
-                Log.d(TAG, "onResponse: " + response.body());
-
+                Log.d(TAG, "onResponse: " + response.body().getDateList().getMaximum());
                 if (response.isSuccessful()){
                     resultsItems = new ArrayList<>();
                     resultsItems = response.body().getResults();
