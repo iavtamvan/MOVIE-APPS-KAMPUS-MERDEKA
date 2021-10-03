@@ -16,6 +16,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.iavariav.moviedb.Config;
 import com.iavariav.moviedb.R;
 import com.iavariav.moviedb.adapter.MovieAdapter;
 import com.iavariav.moviedb.api.ApiConfig;
@@ -48,7 +49,7 @@ public class DashboardFragment extends Fragment {
     }
 
     private void getData() {
-        ApiService apiService = ApiConfig.getApiService();
+        ApiService apiService = ApiConfig.getApiService(Config.BASE_URL_MOVIE);
         apiService.ambilData().enqueue(new Callback<MovieRootModel>() {
             @Override
             public void onResponse(Call<MovieRootModel> call, Response<MovieRootModel> response) {
