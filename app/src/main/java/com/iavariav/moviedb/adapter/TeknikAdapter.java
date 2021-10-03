@@ -54,7 +54,6 @@ public class TeknikAdapter extends RecyclerView.Adapter<TeknikAdapter.MovieViewH
         String replaceKoma = replaceSubTeknikKotakKedua.replace(",", "\n");
 
         teknikViewHolder.tvSub.setText(replaceKoma);
-
     }
 
     @Override

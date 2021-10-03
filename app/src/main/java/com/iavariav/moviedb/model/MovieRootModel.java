@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class MovieRootModel{
 
-//    @SerializedName("dates")
-//    private List<Dates> dateList;
+    @SerializedName("dates")
+    private Dates dateList;
 
     @SerializedName("page")
     private String page;
@@ -20,13 +20,13 @@ public class MovieRootModel{
     @SerializedName("total_results")
     private String totalResults;
 
-//    public List<Dates> getDateList() {
-//        return dateList;
-//    }
-//
-//    public void setDateList(List<Dates> dateList) {
-//        this.dateList = dateList;
-//    }
+    public Dates getDateList() {
+        return dateList;
+    }
+
+    public void setDateList(Dates dateList) {
+        this.dateList = dateList;
+    }
 
     public void setPage(String page){
         this.page = page;
