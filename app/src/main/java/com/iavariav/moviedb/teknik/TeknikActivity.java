@@ -70,8 +70,6 @@ public class TeknikActivity extends AppCompatActivity {
 
     }
 
-
-
     private void getDataTeknik() {
         ApiService apiService = ApiConfig.getApiService(Config.BASE_URL_WEBHOST_APP);
         apiService.ambilDataTeknik()

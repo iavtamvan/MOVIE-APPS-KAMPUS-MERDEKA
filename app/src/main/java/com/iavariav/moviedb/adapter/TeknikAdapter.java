@@ -23,6 +23,7 @@ public class TeknikAdapter extends RecyclerView.Adapter<TeknikAdapter.MovieViewH
     private List<DataItem> dataItems = new ArrayList<>();
     private List<ChildsItem> childsItems = new ArrayList<>();
 
+    private List<String> arrayTeknik = new ArrayList<>();
 
     public TeknikAdapter(Context context, List<DataItem> dataItems) {
         this.context = context;
@@ -43,12 +44,16 @@ public class TeknikAdapter extends RecyclerView.Adapter<TeknikAdapter.MovieViewH
         Log.d("debug", "onBindViewHolder: " + childsItems);
 
         for (int j = 0; j < childsItems.size(); j++) {
-
 //            teknikViewHolder.tvSub.setText(childsItems.get(0).getNamaKat());
-
-
+            arrayTeknik.add(childsItems.get(j).getNamaKat());
             Log.d("debug", "array Child: " + childsItems.get(j).getNamaKat());
         }
+
+        String replaceSubTeknikKotakPertama = arrayTeknik.toString().replace("[", "");
+        String replaceSubTeknikKotakKedua = replaceSubTeknikKotakPertama.replace("]", "");
+        String replaceKoma = replaceSubTeknikKotakKedua.replace(",", "\n");
+
+        teknikViewHolder.tvSub.setText(replaceKoma);
 
     }
 
