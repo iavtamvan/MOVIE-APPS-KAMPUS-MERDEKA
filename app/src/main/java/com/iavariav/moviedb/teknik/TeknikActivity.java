@@ -63,8 +63,6 @@ public class TeknikActivity extends AppCompatActivity {
         namaLengkap = sharedPreferences.getString(Config.SHARED_PREF_NAMA_LENGKAP, "");
         username = sharedPreferences.getString(Config.SHARED_PREF_USERNAME, "");
 
-
-
         tv.setText("Nama lengkap = " + namaLengkap + "\n" + "Username = " + username);
         getDataTeknik();
 
